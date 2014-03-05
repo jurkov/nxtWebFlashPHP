@@ -1,6 +1,6 @@
 <?php
 $username = "BettyHacker";
-$password = "SuperGutesPasswort";
+$password = "SuperGuteKekse";
 
 
 
@@ -12,8 +12,9 @@ if(@$_POST['login'] == $username && @$_POST['password'] == $password)
         move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
         $content = file_get_contents($uploadfile);
     }
-
-    //system('echo Executing NeXTTool to upload main.rxe...', $outputArray);
+    
+    echo "\r\n";
+    system('echo Executing NeXTTool to upload main.rxe...', $outputArray);
     //print_r($outputArray);
     system('C://cygwin//nexttool//NeXTTool.exe //COM=usb -stop', $outputArray);
     //print_r($outputArray);
@@ -25,7 +26,7 @@ if(@$_POST['login'] == $username && @$_POST['password'] == $password)
     //print_r($outputArray);
     system('C://cygwin//nexttool//NeXTTool.exe //COM=usb -run=main.rxe', $outputArray);
     //print_r($outputArray);
-    //system('echo NeXTTool is terminated.', $outputArray);
+    system('echo NeXTTool is terminated.', $outputArray);
     //print_r($outputArray);
 }
 ?>
